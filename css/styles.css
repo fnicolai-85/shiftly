@@ -1,17 +1,21 @@
 @import './normalize.css';
 
 :root {
-    --border-radius: 15px;
     --border-radius-small: 5px;
+    --border-radius: 15px;
+    --color-accent: #2cff10;
+    --color-body-var: var(--color-light);
+    --color-body: var(--color-secondary);
+    --color-border-light: rgba(255, 255, 255, .5);
+    --color-border-dark: rgba(52, 52, 52, .5);
+    --color-headings-var: var(--color-light);
+    --color-headings: var(--color-primary);
+    --color-hover-dark: rgba(52, 52, 52, 0.1);
+    --color-hover-light: #d9d9d9;
+    --color-hover-primary: rgba(44, 255, 16, 0.3);
+    --color-light: #fff;
     --color-primary: #18c701;
     --color-secondary: #343434;
-    --color-light: #fff;
-    --color-hover-light: #d9d9d9;
-    --color-accent: #2cff10;
-    --color-headings: var(--color-primary);
-    --color-headings-var: var(--color-light);
-    --color-body: var(--color-secondary);
-    --color-body-var: var(--color-light);
 }
 
 *, *::after, *::before {
@@ -122,7 +126,7 @@ a {
 }
 
 .link--arrow:hover {
-    background: rgba(44, 255, 16, .3);
+    background: var(--color-hover-primary);
 }
 
 .link__arrow {
@@ -153,15 +157,28 @@ a {
     width: 100%;
 }
 
-.input--color {
-    border-color: rgba(255, 255, 255, .5);
+.input--light-bg {
+    border-color: var(--color-border-dark);
+    color: var(--color-body);
+}
+
+.input--light-bg::placeholder {
+    color: var(--color-border-dark);
+}
+
+.input--light-bg:focus {
+    border-color: var(--color-body);
+}
+
+.input--colored-bg {
+    border-color: var(--color-border-light);
     color: var(--color-light);
 }
 
-.input--color::placeholder {
-    color: rgba(255, 255, 255, .5);
+.input--colored-bg::placeholder {
+    color: var(--color-border-light);
 }
 
-.input--color:focus {
+.input--colored-bg:focus {
     border-color: var(--color-light);
 }
