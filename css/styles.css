@@ -17,6 +17,10 @@
     --color-light: #fff;
     --color-primary: #18c701;
     --color-secondary: #343434;
+    --margin-vertical: 10rem;
+    --padding-horizontal-big: 10rem;
+    --padding-horizontal-small: 3rem;
+    --padding-vertical: 5rem;
 }
 
 *, *::after, *::before {
@@ -37,7 +41,7 @@ body {
     color: var(--color-body);
     font-family: DM Sans, Inter, Arial, Helvetica, sans-serif;
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
     margin: 0;
 }
 
@@ -63,7 +67,7 @@ h2 {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.9rem;
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
 }
 
 h3 {
@@ -286,7 +290,37 @@ a {
     background: var(--color-hover-dark);
 }
 
-/* Sections 
+/* Sections */
+.block {
+    margin: var(--margin-vertical) 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 var(--padding-horizontal-small);
+}
+
+.block__sub-heading {
+    margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 var(--padding-horizontal-big);
+    }
+}
+
+.block--light {
+    background: var(--color-light);
+}
+
+.block--light .block__heading,
+.block--light .block__sub-heading {
+    color: var(--color-primary);
+}
+
 .block--colored {
     background: var(--color-primary);
-} */
+    padding: var(--padding-vertical) 0;
+}
