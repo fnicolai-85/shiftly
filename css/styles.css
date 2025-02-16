@@ -10,3 +10,7 @@
     --color-body: var(--color-secondary);
     --color-body-var: var(--color-light);
 }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
