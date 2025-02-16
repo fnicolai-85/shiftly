@@ -1,1 +1,12 @@
 @import './normalize.css';
+
+:root {
+    --color-primary: #18c701;
+    --color-secondary: #343434;
+    --color-light: #fff;
+    --color-accent: #2cff10;
+    --color-headings: var(--color-primary);
+    --color-headings-var: var(--color-light);
+    --color-body: var(--color-secondary);
+    --color-body-var: var(--color-light);
+}
