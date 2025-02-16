@@ -1,9 +1,12 @@
 @import './normalize.css';
 
 :root {
+    --border-radius: 15px;
+    --border-radius-small: 5px;
     --color-primary: #18c701;
     --color-secondary: #343434;
     --color-light: #fff;
+    --color-hover-light: #d9d9d9;
     --color-accent: #2cff10;
     --color-headings: var(--color-primary);
     --color-headings-var: var(--color-light);
@@ -96,4 +99,35 @@ p {
     h3 {
         font-size: 2.5rem;
     }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+.link {
+    border-radius: var(--border-radius-small);
+    display: inline-block;
+    font-weight: 800;
+    margin: 1rem;
+    padding: 0 1rem;
+    transition: background-color .15s;
+}
+
+.link--arrow {
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.link--arrow:hover {
+    background: rgba(44, 255, 16, .3);
+}
+
+.link__arrow {
+    transition: margin .15s;
+}
+
+.link--arrow:hover .link__arrow {
+    margin-left: 0.5rem;
 }
