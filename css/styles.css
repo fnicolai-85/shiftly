@@ -110,15 +110,15 @@ a {
     border-radius: var(--border-radius-small);
     display: inline-block;
     font-size: 1.8rem;
-    font-weight: 800;
     margin: 1rem;
-    padding: 0 1rem;
     transition: background-color .15s;
 }
 
 .link--arrow {
     color: var(--color-primary);
+    font-weight: 800;
     text-transform: uppercase;
+    padding: 0 1rem;
 }
 
 .link--arrow:hover {
@@ -138,3 +138,4 @@ a {
         font-size: 1.4rem;
     }
 }
+
