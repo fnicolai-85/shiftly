@@ -109,6 +109,7 @@ a {
 .link {
     border-radius: var(--border-radius-small);
     display: inline-block;
+    font-size: 1.8rem;
     font-weight: 800;
     margin: 1rem;
     padding: 0 1rem;
@@ -130,4 +131,10 @@ a {
 
 .link--arrow:hover .link__arrow {
     margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .link {
+        font-size: 1.4rem;
+    }
 }
