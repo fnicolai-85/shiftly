@@ -324,3 +324,29 @@ a {
     background: var(--color-primary);
     padding: var(--padding-vertical) 0;
 }
+
+/* Lists */
+.list {
+    font-size: 1.8rem;
+    list-style: none;
+    padding: 0;
+}
+
+.list--inline .list__item {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .list {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .list--inline .list__item {
+        display: inline-block;
+        margin-right: 3rem;
+    }
+}
