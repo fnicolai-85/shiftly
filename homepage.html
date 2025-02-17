@@ -29,10 +29,44 @@
     ></script>
   </head>
   <body>
-    <ul class="list list--inline">
-      <li class="list__item">List Item</li>
-      <li class="list__item">List Item</li>
-      <li class="list__item">List Item</li>
-    </ul>
+    <nav class="nav collapsible">
+      <header class="nav__header">
+        <a aria-label="Shiftly" class="nav__brand" href="/">
+          <img src="images/LogoPengWord.svg" alt="" />
+        </a>
+        <div class="menu-icon" onclick="toggleMenu(this); openNav()">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list list--inline">
+          <li class="list__item">
+            <a href="" class="link link--dark link--light-bg"
+              >Install Our App</a
+            >
+          </li>
+          <li class="list__item">
+            <a href="" class="link link--dark link--light-bg">Students</a>
+          </li>
+          <li class="list__item">
+            <a href="" class="link link--dark link--light-bg">Businesses</a>
+          </li>
+          <li class="list__item">
+            <a href="" class="link link--dark link--light-bg">Contact Us</a>
+          </li>
+          <li class="list__item userID">
+            <a href="" class="link link--dark link--light-bg">Log In</a>
+          </li>
+          <li class="list__item userID">
+            <a href="" class="link link--light link--colored-bg">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+    </nav>
+    <script src="js/nav-x.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
