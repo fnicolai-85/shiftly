@@ -1,8 +1,9 @@
 @import './normalize.css';
 
 :root {
-    --border-radius-small: 5px;
     --border-radius: 15px;
+    --border-radius-large: 25px;
+    --border-radius-small: 5px;
     --color-accent: #2cff10;
     --color-body-var: var(--color-light);
     --color-body: var(--color-secondary);
@@ -11,7 +12,9 @@
     --color-border-dark: rgba(52, 52, 52, .5);
     --color-headings-var: var(--color-light);
     --color-headings: var(--color-primary);
+    --color-hover-colored-dark: #16ad02;
     --color-hover-dark: rgba(52, 52, 52, 0.1);
+    --color-hover-text-dark: #111;
     --color-hover-light: #d9d9d9;
     --color-hover-primary: rgba(44, 255, 16, 0.3);
     --color-light: #fff;
@@ -136,15 +139,19 @@ a {
     background: var(--color-secondary);
 }
 
-.link--light-bg {
+.link--light-bg, .link--light-bg-accent {
     background: var(--color-light);
 }
 
-.link--colored-bg {
+.link--colored-bg, .link--colored-bg-accent {
     background: var(--color-primary);
 }
 
 .link--colored-bg:hover {
+    background: var(--color-hover-colored-dark);
+}
+
+.link--colored-bg-accent:hover {
     background: var(--color-light);
     box-shadow: 0px 0px 0px 2px var(--color-primary) inset;
     color: var(--color-primary);
@@ -154,10 +161,14 @@ a {
     background: var(--color-hover-light);
 }
 
-.link--light-bg.link--accent:hover {
+.link--light-bg-accent:hover {
     background: var(--color-primary);
     box-shadow: 0px 0px 0px 2px var(--color-light) inset;
     color: var(--color-light);
+}
+
+.link--hover-text.link--dark:hover {
+    color: var(--color-primary);
 }
 
 .link--arrow {
@@ -458,10 +469,13 @@ a {
     padding: 2.5rem 3rem;
 }
 
+.nav__header__list {
+    display: none;
+}
+
 .nav__brand {
     flex-grow: 1;
-    max-width: 346px;
-    /* margin-left: 3rem; */
+    max-width: 350px;
 }
 
 .nav .list__item {
@@ -484,4 +498,43 @@ a {
     background: var(--color-border-lightest);
     height: 1px;
     width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav__header {
+        padding: 0 0 0 4rem;
+    }
+
+    .nav__brand {
+        max-width: 250px;
+        transform: translateY(4px);
+    }
+
+    .nav__header__list {
+        display: inline-block;
+    }
+
+    .nav__header__list .list__item {
+        padding: 0;
+        margin: 3rem 3rem 3rem 0;
+    }
+
+    .nav__header__list .userID {
+        background: var(--color-primary);
+        margin: 1rem 1rem 1rem 0;
+        padding: 0 1.5rem;
+    }
+
+    .nav__header__list .userID__contents .list__item {
+        margin: 2rem 1.5rem 2rem 1.5rem;
+        width: 15rem;
+    }
+
+    .userID .link {
+        border-radius: var(--border-radius-large);
+    }
 }
