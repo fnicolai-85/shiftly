@@ -391,7 +391,7 @@ a {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1185px) {
     .list--inline .list__item {
         display: inline-block;
         margin-right: 3rem;
@@ -476,6 +476,7 @@ a {
 .nav__brand {
     flex-grow: 1;
     max-width: 350px;
+    transform: translateY(4px);
 }
 
 .nav .list__item {
@@ -500,7 +501,7 @@ a {
     width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1185px) {
     .menu-icon {
         display: none;
     }
@@ -511,7 +512,10 @@ a {
 
     .nav__brand {
         max-width: 250px;
-        transform: translateY(4px);
+    }
+
+    .nav .collapsible__content {
+        display: none;
     }
 
     .nav__header__list {
