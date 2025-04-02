@@ -611,6 +611,10 @@ a {
     .card__header h2 {
         font-size: 3rem;
     }
+
+    .card__text {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 350px) {
