@@ -779,3 +779,68 @@ a {
         max-width: 440px;
     }
 }
+
+/* Question Block */
+.block--question .container {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.block--question .block__header,
+.block--question .block__form {
+    width: 100%;
+}
+
+.block--question .block__form {
+    grid-gap: var(--form-gap);
+    grid-template-columns: repeat(4, 1fr);
+    overflow: visible;
+}
+
+.block--question .block__form .long {
+    grid-column: span 2;
+}
+
+.block--question .block__form .wide {
+    grid-row: span 2;
+}
+
+.block--question .link {
+    border-radius: var(--border-radius);
+    grid-column: span 4;
+    grid-row: 3;
+}
+
+.block--question #email {
+    grid-row: 2;
+}
+
+.block--question #message {
+    transform: translateY(-115px);
+    height: calc(100% + 115px);
+    flex-wrap: wrap;
+}
+
+.block--question .block__penguin {
+    position: absolute;
+    transform: translateX(970px) rotate(30deg) scaleX(-1);
+    width: 313px;
+}
+
+@media screen and (max-width: 1023px) {
+    .block--question .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .block--question > .block__form * {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .block--question .container {
+        align-items: flex-start;
+    }
+}
