@@ -22,6 +22,7 @@
     --color-secondary: #343434;
     --margin-vertical: 100px;
     --grid-gap: 100px;
+    --form-gap: 10px;
     --padding-horizontal-big: 100px;
     --padding-horizontal-small: 30px;
     --padding-vertical: 50px;
@@ -654,7 +655,7 @@ a {
     width: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .block--app .container {
         flex-direction: column;
     }
@@ -710,5 +711,71 @@ a {
     .block--ratings .block__penguin img {
         margin-left: 70px;
         width: 300px;
+    }
+}
+
+/* Mail Block */
+.block--mail .container {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.block--mail__column-left {
+    max-width: 460px;
+}
+
+.block--mail__column-left .block__header,
+.block--mail__column-left .block__form {
+    width: 100%;
+}
+
+.block--mail__column-left .block__form {
+    grid-gap: var(--form-gap);
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.block--mail__column-left .block__form .long {
+    grid-column: span 2;
+}
+
+.block--mail__column-left .link {
+    border-radius: var(--border-radius);
+}
+
+.block--mail__column-right {
+    margin-top: 40px;
+    max-width: 460px;
+}
+
+.block--mail__column-right .block__paragraph .block__sub-heading {
+    margin-top: 0;
+}
+
+.block--mail .block__penguin {
+    position: absolute;
+    transform: translateX(920px) rotate(20deg) scaleX(-1);
+    width: 430px;
+}
+
+@media screen and (max-width: 1023px) {
+    .block--mail .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .block--mail__column-left > .block__form * {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .block--mail .container {
+        align-items: flex-start;
+    }
+
+    .block--mail__column-right {
+        margin: 0 0 0 80px;
+        max-width: 440px;
     }
 }
