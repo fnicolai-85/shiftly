@@ -970,12 +970,19 @@ a {
 }
 
 .block--about .list {
+    font-size: 2rem;
     list-style: circle;
     padding: 1rem 0;
 }
 
 .block--about .list__item {
     transform: translateX(3rem);
+}
+
+@media screen and (min-width: 1024px) {
+    .block--about .list {
+        font-size: 1.6rem;
+    }
 }
 
 /* Business Page */
