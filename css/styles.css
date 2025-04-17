@@ -5,6 +5,7 @@
     --border-radius-large: 25px;
     --border-radius-small: 5px;
     --color-accent: #2cff10;
+    --color-alternative1: #b26ae1;
     --color-body-var: var(--color-light);
     --color-body: var(--color-secondary);
     --color-border-light: rgba(255, 255, 255, .5);
@@ -434,6 +435,25 @@ a {
     }
 }
 
+.block--light .list,
+.block--colored .list {
+    font-size: 2rem;
+    list-style: circle;
+    padding: 1rem 0;
+}
+
+.block--light .list__item,
+.block--colored .list__item {
+    transform: translateX(3rem);
+}
+
+@media screen and (min-width: 1024px) {
+    .block--light .list,
+    .block--colored .list {
+        font-size: 1.6rem;
+    }
+}
+
 /* Collapsibles */
 .collapsible__content {
     max-height: 0;
@@ -625,20 +645,6 @@ a {
         font-size: 4rem;
         line-height: 6rem;
     }
-}
-
-.block-page-header--about {
-    margin-top: 0;
-    padding: 80px 0;
-}
-
-.block-page-header--about .block-page-header__heading {
-    color: var(--color-light);
-    margin: 0;
-}
-
-.block-page-header--about--business {
-    background: var(--color-business);
 }
 
 
@@ -977,27 +983,30 @@ a {
     text-align: center;
 }
 
-.block--about .list {
-    font-size: 2rem;
-    list-style: circle;
-    padding: 1rem 0;
+.block-page-header.about {
+    margin-top: 0;
+    padding: 80px 0;
 }
 
-.block--about .list__item {
-    transform: translateX(3rem);
-}
-
-@media screen and (min-width: 1024px) {
-    .block--about .list {
-        font-size: 1.6rem;
-    }
+.about .block-page-header__heading {
+    color: var(--color-light);
+    margin: 0;
 }
 
 /* Business Page */
-.block--colored.block--about--business {
+.block--colored.about--business {
     background: var(--color-business);
 }
 
-.block--light.block--about--business .block__heading {
+.block--light.about--business .block__heading {
     color: var(--color-business);
+}
+
+/* Business Page */
+.block--colored.about--training {
+    background: var(--color-alternative1);
+}
+
+.block--light.about--training .block__heading {
+    color: var(--color-alternative1);
 }
