@@ -931,6 +931,12 @@ a {
     }
 }
 
+/* FAQ Block */
+.block--faq .block__text .link--arrow {
+    margin: 10px 0;
+    transform: translateX(-10px);
+}
+
 /* Bottom Block */
 .block--bottom {
     font-size: 1.2rem;
