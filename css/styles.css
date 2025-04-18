@@ -51,6 +51,8 @@ body {
     font-size: 2rem;
     line-height: 3rem;
     margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 body .block--colored,
@@ -306,6 +308,7 @@ a {
 
 .card__header {
     text-transform: uppercase;
+    word-wrap: normal;
 }
 
 .card__text {
@@ -414,6 +417,8 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .list--inline .list__item {
@@ -445,6 +450,7 @@ a {
 .block--light .list__item,
 .block--colored .list__item {
     transform: translateX(3rem);
+    padding-right: 3rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -837,6 +843,10 @@ a {
 }
 
 /* Question Block */
+#temporary-block--question .block__penguin {
+    transform: translateY(50px);
+}
+
 .block--question .container {
     align-items: center;
     justify-content: flex-start;
@@ -948,7 +958,7 @@ a {
     justify-content: space-between;
 }
 
-.block--bottom .column_heading {
+.block--bottom .column__heading {
     color: var(--color-light);
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -984,6 +994,21 @@ a {
     flex-basis: 100%;
 }
 
+@media screen and (max-width: 600px) {
+    .block--bottom {
+        text-align: center;
+    }
+
+    .block--bottom .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block--bottom .column__heading:not(.column__heading.first) {
+        padding-top: 3rem;
+    }
+}
+
 /* About Page */
 .block--instructions--preview .block__header {
     text-align: center;
@@ -1008,11 +1033,20 @@ a {
     color: var(--color-business);
 }
 
-/* Business Page */
+/* Training Page */
 .block--colored.about--training {
     background: var(--color-alternative1);
 }
 
 .block--light.about--training .block__heading {
+    color: var(--color-alternative1);
+}
+
+/* Ratings Page */
+.block--colored.about--ratings {
+    background: var(--color-alternative1);
+}
+
+.block--light.about--ratings .block__heading {
     color: var(--color-alternative1);
 }
