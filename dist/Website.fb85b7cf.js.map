@@ -1,1 +1,0 @@
-{"mappings":"AAAA,SAAS,WAAW,OAAO;IACvB,QAAQ,SAAS,CAAC,MAAM,CAAC;AAC3B","sources":["js/nav-x.js"],"sourcesContent":["function toggleMenu(element) {\n    element.classList.toggle(\"open\");\n  }\n"],"names":[],"version":3,"file":"Website.fb85b7cf.js.map","sourceRoot":"/__parcel_source_root/"}
