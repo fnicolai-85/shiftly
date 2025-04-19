@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAAS;IACL,MAAM,UAAU,SAAS,aAAa,CAAC;IACvC,QAAQ,SAAS,CAAC,MAAM,CAAC;AAC7B","sources":["js/nav.js"],"sourcesContent":["function openNav() {\n    const element = document.querySelector(\".nav\");\n    element.classList.toggle(\"collapsible--expanded\");\n}\n"],"names":[],"version":3,"file":"Website.53c69205.js.map","sourceRoot":"/__parcel_source_root/"}
