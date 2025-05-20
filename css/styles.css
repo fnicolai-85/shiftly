@@ -1014,6 +1014,11 @@ a {
     text-align: center;
 }
 
+.block--instructions--preview.about--privacy .container {
+    display: flex;
+    justify-content: center;
+}
+
 .block-page-header.about {
     margin-top: 0;
     padding: 80px 0;
@@ -1049,4 +1054,31 @@ a {
 
 .block--light.about--ratings .block__heading {
     color: var(--color-alternative1);
+}
+
+/* Privacy Page */
+.about--privacy .block-page-header__heading {
+    color: var(--color-secondary);
+}
+
+.block-page-header.about--privacy {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+}
+
+.block--instructions--preview.about--privacy {
+    font-style: italic;
+    margin-top: 0;
+}
+
+.about--privacy .block__sub-heading {
+    color: var(--color-secondary);
+}
+
+.about--privacy--businesses .block__heading {
+    color: var(--color-business);
+}
+
+.block--colored.about--privacy {
+    background: var(--color-secondary);
 }
