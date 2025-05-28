@@ -1014,7 +1014,7 @@ a {
     text-align: center;
 }
 
-.block--instructions--preview.about--privacy .container {
+.block--instructions--preview .container {
     display: flex;
     justify-content: center;
 }
@@ -1075,10 +1075,21 @@ a {
     color: var(--color-secondary);
 }
 
-.about--privacy--businesses .block__heading {
-    color: var(--color-business);
-}
-
 .block--colored.about--privacy {
     background: var(--color-secondary);
+}
+
+/* Community Page */
+.block-page-header.about--community {
+    background: var(--color-alternative1);
+}
+
+.about--community--businesses .block__paragraph__do-not .block__sub-heading {
+    color: var(--color-alternative1);
+}
+
+.about--community--businesses .block__heading,
+.about--community--businesses .block__sub-heading,
+.about--privacy--businesses .block__heading {
+    color: var(--color-business);
 }
